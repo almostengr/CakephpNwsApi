@@ -39,6 +39,12 @@ public function initialize(): void
 }
 ```
 
+Inside of your controller method, you will call one of the endpoints like the below.
+
+```php
+$this->NwsApi->getAlertTypes();
+```
+
 ## Overriding Default Configuration
 
 This plugin has default values for the API URL and the timeout. To override the defaults, 
