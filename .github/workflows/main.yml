@@ -1,11 +1,8 @@
 on:
-    push:
-        branches:
-            - main
+    release:
+        types: [published]
   
 jobs:
-    # TODO RUN TESTS
-    
     update_package:
         runs-on: ubuntu-latest
         steps:
