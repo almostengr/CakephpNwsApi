@@ -6,10 +6,13 @@ namespace NationalWeatherServiceApi\Controller\Component;
 use Cake\Controller\Component;
 use Cake\Core\Configure;
 use Cake\Http\Client;
+use NationalWeatherServiceApi\Http\Client\NwsAlertResponse;
 use NationalWeatherServiceApi\Model\Enum\ZoneType;
 
 /**
  * NwsApi component
+ * 
+ * @var Cake\Http\Client $httpClient
  */
 class NwsApiComponent extends Component
 {
@@ -48,32 +51,68 @@ class NwsApiComponent extends Component
 
     public function getAllAlerts()
     {
-        return $this->httpClient->get("/alerts");
+        $result = $this->httpClient->get("/alerts");
+
+        if ($result->isSuccess()) {
+            return new NwsAlertResponse($result->getHeaders(), $result->getStringBody());
+        }
+
+        return $result;
     }
 
     public function getActiveAlerts()
     {
-        return $this->httpClient->get("/alerts/active");
+        $result = $this->httpClient->get("/alerts/active");
+
+        if ($result->isSuccess()) {
+            return new NwsAlertResponse($result->getHeaders(), $result->getStringBody());
+        }
+
+        return $result;
     }
 
     public function getActiveAlertCount()
     {
-        return $this->httpClient->get("/alerts/active/count");
+        $result = $this->httpClient->get("/alerts/active/count");
+
+        if ($result->isSuccess()) {
+            return new NwsAlertResponse($result->getHeaders(), $result->getStringBody());
+        }
+
+        return $result;
     }
 
     public function getActiveAlertsByZone(string $zoneId)
     {
-        return $this->httpClient->get("/alerts/active/zone/$zoneId");
+        $result = $this->httpClient->get("/alerts/active/zone/$zoneId");
+
+        if ($result->isSuccess()) {
+            return new NwsAlertResponse($result->getHeaders(), $result->getStringBody());
+        }
+
+        return $result;
     }
 
     public function getActiveAlertsByArea(string $areaId)
     {
-        return $this->httpClient->get("/alerts/active/area/$areaId");
+        $result = $this->httpClient->get("/alerts/active/area/$areaId");
+
+        if ($result->isSuccess()) {
+            return new NwsAlertResponse($result->getHeaders(), $result->getStringBody());
+        }
+
+        return $result;
     }
 
     public function getActiveAlertsByRegion(string $regionId)
     {
-        return $this->httpClient->get("/alerts/active/region/$regionId");
+        $result = $this->httpClient->get("/alerts/active/region/$regionId");
+
+        if ($result->isSuccess()) {
+            return new NwsAlertResponse($result->getHeaders(), $result->getStringBody());
+        }
+
+        return $result;
     }
 
     public function getAlertTypes()
