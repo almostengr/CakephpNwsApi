@@ -1,10 +1,17 @@
-# NationalWeatherServiceApi plugin for CakePHP
+# National Weather Service API Plugin for CakePHP
 
 Interact with the National Weather Service API using CakePHP Plugin
 
 Methods that are available are based on the routes listed on the National Weather Service website at 
 https://www.weather.gov/documentation/services-web-api#/.
 
+
+## Contents
+
+* [Installation](#installation)
+* [Usage / How To Use](#usage)
+* [Overriding Default Configuration](#overriding-default-configuration)
+* [Report Issues / Feature Requests](#report-issues-or-feature-requests)
 
 ## Installation
 
@@ -39,10 +46,10 @@ add an entry to your app_local.php file.
 
 ```json
 [
-    "NwsApi" =>
+    "NwsApi":
     {
-        "url" => "api.weather.gov",
-        "timeout" => 30,
+        "url": "api.weather.gov",
+        "timeout": 30,
     }
 ]
 ```

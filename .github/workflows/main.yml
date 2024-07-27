@@ -1,0 +1,17 @@
+on:
+    push:
+        branches:
+            - main
+  
+jobs:
+    # TODO RUN TESTS
+    
+    update_package:
+        runs-on: ubuntu-latest
+        steps:
+        -   name: Packagist Update
+            uses: mnavarrocarter/packagist-update@v1.0.0
+            with:
+                username: almostengr
+                api_token: ${{ secrets.PACKAGIST_TOKEN }}
+                package_name: almostengr/national-weather-services-api
