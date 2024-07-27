@@ -12,6 +12,7 @@ https://www.weather.gov/documentation/services-web-api#/.
 * [Usage / How To Use](#usage)
 * [Overriding Default Configuration](#overriding-default-configuration)
 * [Report Issues / Feature Requests](#report-issues-or-feature-requests)
+* [Versoining](#version-numbering)
 
 ## Installation
 
@@ -62,5 +63,19 @@ add an entry to your app_local.php file.
 
 ## Report Issues or Feature Requests
 
-Issues and feature requests should be submitted to the project repository at 
+Issues and feature requests should be submitted to the project issue tracker at 
 https://github.com/almostengr/cakephp-nws-api.
+
+Upcoming features and functionality are also listed on the project issue tracker.
+
+## Version Numbering
+
+The version number for this plugin is in the following format. Using the example of 
+
+```txt
+5.2024.07.26
+```
+
+"5" represents the major CakePHP version number that the plugin is designed for
+
+"2024.07.26" represents the date, in YYYY-MM-DD format, that the release was created
