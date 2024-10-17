@@ -60,6 +60,17 @@ final class NwsApiComponent extends Component
         return is_null($value) || empty($value);
     }
 
+    public function get(string $url)
+    {
+        $result = $this->httpClient->get($url);
+
+        if ($result->isSuccess()) {
+            return json_decode($result->getStringBody());
+        }
+
+        return $result;
+    }
+
     public function getAllAlerts()
     {
         $result = $this->httpClient->get("/alerts");
