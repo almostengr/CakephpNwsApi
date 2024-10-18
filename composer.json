@@ -1,5 +1,5 @@
 {
-    "name": "almostengr/national-weather-service-api",
+    "name": "almostengr/cakephp-nwsapi",
     "description": "National Weather Service API plugin for CakePHP",
     "type": "cakephp-plugin",
     "license": "MIT",
